@@ -1,0 +1,233 @@
+:root{
+    --primary:#020617;
+    --secondary:#3b82f6;
+}
+
+.heading{
+    font-size: 3rem;
+    color:var(--secondary);
+    font-family: monospace;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    margin: 2rem 0rem;
+    /* text-shadow: .5rem .5rem 50px var(--secondary); */
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flex-col-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container-col-3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: white;
+}
+
+nav > img{
+    width: 3rem;
+    height: auto;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+nav a:hover{
+    color: var(--secondary);
+}
+
+#hero{
+    width: 100vw;
+    height: 95vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero > p{
+    color: var(--secondary);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+    font-size: 3rem;
+    /* text-shadow: 0.1rem 0.1rem 30px #93c5fd; */
+}
+
+#hero > p:first-child{
+    /* padding: 0rem 10rem; */
+    font-size: 10rem;
+    font-weight: 900;
+    animation: slide-right 2s linear;
+}
+
+#hero > p:nth-child(2){
+    font-size: 3rem;
+    z-index: 3;
+    color: white;
+    text-shadow: 0.2rem 0.2rem 30px var(--primary);
+    animation: slide-left 2s linear;
+}
+
+#hero-robot{
+    width: 30rem;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    translate: 50% 50%;
+    z-index: 2;
+    filter: drop-shadow(0.2rem 0.2rem 30px #94a3b8);
+    animation: pop 2s linear;
+}
+
+#hero-hand{
+    position: absolute;
+    width: 30rem;
+    left: -5%;
+    bottom: -8%;
+}
+
+@keyframes pop {
+    0%{
+        scale: 0;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    0%{
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#about,#frameworkAndLibraries,#feedback{
+    width: 100vw;
+    height: 100vh;
+}
+
+.components > div > img{
+    grid-column: span 1;
+    width: 100%;
+}
+
+.components > div > div{
+    grid-column: span 1;
+    width: 100%;
+    text-align: center;
+
+}
+
+.components > div > div > p{
+    color: #94a3b8;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0rem 4rem 0rem 0rem;
+}
+
+.framework-col{
+    grid-column: span 1;
+}
+
+p.framework-col {
+    font-size: 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: var(--secondary) solid 2px;
+    border-radius: 4rem;
+    padding: 1rem 2rem;
+    box-shadow: 1px 1px 20px var(--secondary);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-family: monospace;
+    gap: 1rem;
+}
+
+form label{
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--primary);
+}
+
+form input,textarea{
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    padding: .2rem 1rem;
+    background-color: var(--primary);
+}
+
+form input::placeholder,textarea::placeholder{
+    color: white;
+}
+
+form input[type=submit]{
+    width: fit-content;
+    color: white;
+    padding: .2rem 1rem;
+    background-color: var(--secondary);
+    align-self: center;
+    border: none;
+    border-radius: 2rem;
+}
+
+form input[type=submit]:hover{
+    cursor: pointer;
+}

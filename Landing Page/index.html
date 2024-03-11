@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI - The New Era</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <style>
+        *{
+            margin: 0px;
+        }
+
+        body{
+            background-color: var(--primary);
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./assets/AI Logo.png" alt="logo">
+        <div class="flex-row-center">
+            <a href="#about">About</a>
+            <a href="#frameworkAndLibraries">FrameWorks</a>
+        </div>
+    </nav>
+    <section id="hero" class="flex-col-center">
+        <p id="headingHero">Artificial<br>Intelligence</p>
+        <p id="subHeadingHero">Entering in the Era of Automation</p>
+        <img src="./assets/AI Robot2.png" alt="AI Head" id="hero-robot" >
+    </section>
+    <section id="about" class="components flex-col-center">
+        <div class="grid-container">
+            <img src="./assets/AI Hand with Brain.png" alt="AI with Hand" class="fadeIn" >
+            <div class="fadeIn">
+                <h1 class="heading">What is AI?</h1>
+                <p>
+                    Artificial intelligence (AI), the ability of a digital computer or computer-controlled robot to perform tasks commonly associated with intelligent beings. The term is frequently applied to the project of developing systems endowed with the intellectual processes characteristic of humans, such as the ability to reason, discover meaning, generalize, or learn from past experience. Since the development of the digital computer in the 1940s, it has been demonstrated that computers can be programmed to carry out very complex tasks—such as discovering proofs for mathematical theorems or playing chess—with great proficiency. Still, despite continuing advances in computer processing speed and memory capacity, there are as yet no programs that can match full human flexibility over wider domains or in tasks requiring much everyday knowledge. On the other hand, some programs have attained the performance levels of human experts and professionals in performing certain specific tasks, so that artificial intelligence in this limited sense is found in applications as diverse as medical diagnosis, computer search engines, voice or handwriting recognition, and chatbots.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="frameworkAndLibraries" class="components flex-col-center">
+        <div class="grid-container">
+            <div>
+                <h1 class="heading">FrameWork and Libraries</h1>
+                <div class="grid-container-col-3">
+                    <p class="framework-col">Tensorflow</p>
+                    <p class="framework-col">Scikit Learn</p>
+                    <p class="framework-col">Pytorch</p>
+                    <p class="framework-col">OpenAI</p>
+                    <p class="framework-col">LangChain</p>
+                </div>
+            </div>
+            <img src="./assets/AI Robot.png" alt="Robot" >
+        </div>
+    </section>
+    <section id="feedback" class="components flex-col-center">
+        <div class="grid-container">
+            <img src="./assets/AI Robot with Person.png" alt="AI with Person" >
+            <form>
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" placeholder="FirstName LastName" style="text-align: center;">
+                </div>
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" placeholder="youremail@email.com" style="text-align: center;">
+                </div>
+                <div>
+                    <label for="response">Feedback:</label><br>
+                    <textarea name="response" placeholder="Your Feedback" rows="10" style="text-align: center;"></textarea>
+                </div>
+                <input type="submit" placeholder="Submit">
+            </form>
+        </div>
+    </section>
+
+    <script src="./script/index.js"></script>
+</body>
+</html>
